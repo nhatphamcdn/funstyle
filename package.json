@@ -1,0 +1,35 @@
+{
+  "name": "funstyle",
+  "version": "1.0.0",
+  "description": "FuncStyle is project make a myself UI. The main purpose of this project is for learning, and for personal use. It will contain ideas from many different frameworks, I will try to address those ideas in my comments.",
+  "main": "css/funstyle.min.css",
+  "scripts": {
+    "build": "npm run css:compile && npm run css:prefix && npm run css:minify --silent",
+    "css:compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:css/",
+    "css:minify": "cleancss -O1 --with-rebase --source-map --source-map-inline-sources --batch --batch-suffix .min css/*.css !css/*.min.css",
+    "css:prefix": "postcss --use autoprefixer --config css --replace css/*.css !css/*.min.css",
+    "watch": "nodemon --watch scss/ --ext scss --exec 'npm run build'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhatphamcdn/funstyle.git"
+  },
+  "keywords": [
+    "css",
+    "css-framework"
+  ],
+  "author": "Nhat Pham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nhatphamcdn/funstyle/issues"
+  },
+  "homepage": "https://github.com/nhatphamcdn/funstyle#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "clean-css-cli": "^5.6.0",
+    "nodemon": "^2.0.18",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.53.0"
+  }
+}
