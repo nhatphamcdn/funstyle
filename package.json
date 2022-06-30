@@ -4,7 +4,7 @@
   "description": "FuncStyle is project make a myself UI. The main purpose of this project is for learning, and for personal use. It will contain ideas from many different frameworks, I will try to address those ideas in my comments.",
   "main": "css/funstyle.min.css",
   "scripts": {
-    "build": "npm run css:compile && npm run css:prefix && npm run css:minify --silent",
+    "build": "npm run lint:scss && npm run css:compile && npm run css:prefix && npm run css:minify --silent",
     "css:compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:css/",
     "css:minify": "cleancss -O1 --with-rebase --source-map --source-map-inline-sources --batch --batch-suffix .min css/*.css !css/*.min.css",
     "css:prefix": "postcss --use autoprefixer --config css --replace css/*.css !css/*.min.css",
