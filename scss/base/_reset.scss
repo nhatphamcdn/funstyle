@@ -3,14 +3,16 @@
 /* Document
    ========================================================================== */
 
+$font-reset-default: monospace;
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
   line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -62,7 +64,7 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
+  font-family: $font-reset-default; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -105,7 +107,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  font-family: $font-reset-default; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -196,7 +198,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -219,7 +221,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: 0.063em dotted ButtonText;
 }
 
 /**
@@ -288,8 +290,8 @@ textarea {
  */
 
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  appearance: textfield; /* 1 */
+  outline-offset: -0.125em; /* 2 */
 }
 
 /**
@@ -297,7 +299,7 @@ textarea {
  */
 
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 /**
@@ -306,7 +308,7 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
+  appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
 

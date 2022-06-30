@@ -8,7 +8,9 @@
     "css:compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:css/",
     "css:minify": "cleancss -O1 --with-rebase --source-map --source-map-inline-sources --batch --batch-suffix .min css/*.css !css/*.min.css",
     "css:prefix": "postcss --use autoprefixer --config css --replace css/*.css !css/*.min.css",
-    "watch": "nodemon --watch scss/ --ext scss --exec 'npm run build'"
+    "watch": "nodemon --watch scss/ --ext scss --exec 'npm run build'",
+    "lint:scss": "stylelint '**/*.scss' -f verbose --color",
+    "lint:scss:fix": "stylelint '**/*.scss' --fix -f verbose —color"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,8 @@
     "nodemon": "^2.0.18",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
-    "sass": "^1.53.0"
+    "sass": "^1.53.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard-scss": "^4.0.0"
   }
 }

@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "indentation": 2,
+    "unit-allowed-list": ["em", "rem", "%", "s"]
+  },
+  "overrides": [
+    {
+      "files": ["*.scss", "**/*.scss"],
+      "customSyntax": "postcss-scss"
+    }
+  ]
+}
