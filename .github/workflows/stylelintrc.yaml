@@ -1,0 +1,28 @@
+name: Style Lint
+
+on:
+  push:
+    branches: [ "main", "release/*" ]
+  pull_request:
+    branches: [ "**" ]
+
+env:
+    NODE_VERSION: 16
+jobs:
+  stylelintrc:
+    name: Style Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Code Checkout
+      	uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run stylelintrc check
+        run: npm run lint:scss
