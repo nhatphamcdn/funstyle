@@ -22,5 +22,19 @@ $container-max-widths: (
   xxl: 1320px
 ) !default;
 
+// Grid columns
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
+$spacer: 1rem !default;
+$gutters: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
 // Container padding
 $container-padding-x: 1.5rem !default;
