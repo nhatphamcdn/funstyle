@@ -9,7 +9,8 @@
   margin-left: auto;
 }
 
-.container {
+.container,
+.container-fluid {
   @extend %container-fluid;
 }
 
