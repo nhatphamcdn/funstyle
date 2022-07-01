@@ -1,36 +1,17 @@
 @use "sass:map";
 /* stylelint-disable */
 $utilities: (
-  "align": (
-      property: vertical-align,
-      values: baseline top middle bottom text-bottom text-top,
-  ),
-  "float": (
-      responsive: true,
-      values: left right none,
-  ),
   "overflow": (
-      values: auto hidden,
+    values: auto hidden,
   ),
   "display": (
-      class: d,
-      responsive: true,
-      print: true,
-      values: none inline inline-block block table table-row table-cell flex inline-flex,
+    class: d,
+    responsive: true,
+    print: true,
+    values: none inline inline-block block table table-row table-cell flex inline-flex,
   ),
   
   // Sizing
-  "width": (
-      class: w,
-      responsive: true,
-      values: (
-          25: 25%,
-          50: 50%,
-          75: 75%,
-          100: 100%,
-          auto: auto,
-      ),
-  ),
   "max-width": (
       class: mw,
       values: (100: 100%),
@@ -44,16 +25,6 @@ $utilities: (
       property: min-width,
       class: min-vw,
       values: (100: 100vw),
-  ),
-  "height": (
-      class: h,
-      values: (
-          25: 25%,
-          50: 50%,
-          75: 75%,
-          100: 100%,
-          auto: auto,
-      ),
   ),
   "max-height": (
       class: mh,
@@ -277,49 +248,6 @@ $utilities: (
       class: pl,
       responsive: true,
       values: $spacers,
-  ),
-  
-  // Text
-  "text-transform": (
-      class: text,
-      values: lowercase uppercase capitalize,
-  ),
-  "text-align": (
-      class: text,
-      responsive: true,
-      values: left right center,
-  ),
-  "white-space": (
-      class: text,
-      values: (
-          wrap: normal,
-          nowrap: nowrap,
-      ),
-  ),
-  "text-decoration": (
-      values: none underline line-through,
-  ),
-  "font-style": (
-      class: font,
-      values: italic normal,
-  ),
-  "word-wrap": (
-      class: text,
-      values: (break: break-word),
-  ),
-  "user-select": (
-      values: all auto none,
-  ),
-  "pointer-events": (
-      class: pe,
-      values: none auto,
-  ),
-  "visibility": (
-      class: null,
-      values: (
-          visible: visible,
-          invisible: hidden,
-      ),
   ),
 );
 /* stylelint-enable */
