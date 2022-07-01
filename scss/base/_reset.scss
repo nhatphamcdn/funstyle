@@ -196,17 +196,8 @@ pre {
   /* CSS2 */
   white-space: pre-wrap;
 
-<<<<<<< HEAD
   /* CSS 2.1 */
   white-space: pre-line;
-=======
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
->>>>>>> 9d57336 (feat: Reconfig stylelintrc + update reset CSS)
 
   /* CSS 3 (and 2.1 as well, actually) */
   word-wrap: break-word;
@@ -236,20 +227,9 @@ strong {
   font-weight: bold;
 }
 
-<<<<<<< HEAD
 td,
 td img {
   vertical-align: top;
-=======
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
-[type="search"] {
-  appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
->>>>>>> 9d57336 (feat: Reconfig stylelintrc + update reset CSS)
 }
 
 /* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
