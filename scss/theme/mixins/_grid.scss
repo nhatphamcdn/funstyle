@@ -1,0 +1,11 @@
+@use "sass:math";
+
+@mixin make-col($size: false, $columns: $grid-columns, $auto-width: false) {
+  @if $size {
+    flex: 0 0 auto;
+    width: if($auto-width, auto, math.percentage(math.div($size, $columns)));
+  } @else {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+}
