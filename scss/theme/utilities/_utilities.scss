@@ -1,6 +1,6 @@
 @use "sass:map";
 /* stylelint-disable */
-$utilities: map.merge((
+$utilities: (
   "align": (
       property: vertical-align,
       values: baseline top middle bottom text-bottom text-top,
@@ -321,6 +321,5 @@ $utilities: map.merge((
           invisible: hidden,
       ),
   ),
-),
-());
+);
 /* stylelint-enable */
