@@ -121,11 +121,6 @@ embed {
   max-width: 100%;
 }
 
-/* force a vertical scrollbar to prevent a jumpy page */
-html {
-  overflow-y: scroll;
-}
-
 /* we use a lot of ULs that aren't bulleted.
 	you'll have to restore the bullets within content,
 	which is fine because they're probably customized anyway */
@@ -166,6 +161,7 @@ dfn[title] {
 
 /* tables still need cellspacing="0" in the markup */
 table {
+  font-size: inherit;
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -221,11 +217,6 @@ select,
 input,
 textarea {
   font: 99% sans-serif;
-}
-
-table {
-  font-size: inherit;
-  font: 100%;
 }
 
 small {
