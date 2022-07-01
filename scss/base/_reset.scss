@@ -228,6 +228,7 @@ h3,
 h4,
 h5,
 h6 {
+  margin-bottom: var(--typography-spacing-vertical);
   color: var(--text-color);
   font-weight: var(--font-weight);
   font-size: var(--font-size);
