@@ -1,0 +1,93 @@
+a,
+[role="link"] {
+  outline: none;
+  background-color: var(--background-color); // 1
+  color: var(--color);
+  text-decoration: var(--text-decoration);
+
+  &:is([aria-current], :hover, :active, :focus) {
+    --color: var(--primary-hover);
+  }
+
+  &:focus {
+    --background-color: var(--primary-focus);
+  }
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+// Small
+small {
+  --font-size: 0.875em;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --font-weight: 700;
+}
+
+h1 {
+  --font-size: 2rem;
+  --typography-spacing-vertical: 3rem;
+}
+
+h2 {
+  --font-size: 1.75rem;
+  --typography-spacing-vertical: 2.625rem;
+}
+
+h3 {
+  --font-size: 1.5rem;
+  --typography-spacing-vertical: 2.25rem;
+}
+
+h4 {
+  --font-size: 1.25rem;
+  --typography-spacing-vertical: 1.874rem;
+}
+
+h5 {
+  --font-size: 1.125rem;
+  --typography-spacing-vertical: 1.6875rem;
+}

@@ -1,5 +1,7 @@
-// COPY from CSS Bootstrap variables
+@use "sass:color";
+@import "colors";
 
+// COPY from CSS Bootstrap variables
 // Prefix for :root CSS variables
 $prefix: fs- !default;
 
@@ -38,3 +40,17 @@ $gutters: (
 
 // Container padding
 $container-padding-x: 1.5rem !default;
+
+:root {
+  // Spacings for typography elements
+  --typography-spacing-vertical: 1.5rem;
+
+  // Primary colors
+  --primary: #{$primary-600};
+  --primary-hover: #{$primary-700};
+  --primary-focus: #{tint-color($primary-600, 0.125)};
+  --primary-inverse: #{$white};
+
+  // Texts colors
+  --text-color: #{$gray-700};
+}

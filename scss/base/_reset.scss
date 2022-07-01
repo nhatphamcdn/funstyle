@@ -16,13 +16,6 @@ body div,
 span,
 object,
 iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
 blockquote,
 pre,
 abbr,
@@ -85,19 +78,6 @@ summary {
   background: transparent;
 }
 
-main,
-article,
-aside,
-figure,
-footer,
-header,
-nav,
-section,
-details,
-summary {
-  display: block;
-}
-
 /* Handle box-sizing while better addressing child elements:
    http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {
@@ -126,31 +106,6 @@ embed {
 	which is fine because they're probably customized anyway */
 ul {
   list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-  content: "";
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-del {
-  text-decoration: line-through;
 }
 
 abbr[title],
@@ -219,44 +174,13 @@ textarea {
   font: 99% sans-serif;
 }
 
-small {
-  font-size: 85%;
-}
-
-strong {
-  font-weight: bold;
-}
-
 td,
 td img {
   vertical-align: top;
 }
 
-/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-/* standardize any monospaced elements */
-pre,
-code,
-kbd,
-samp {
-  font-family: monospace, sans-serif;
-}
-
 /* hand cursor on clickable elements */
+[aria-focus],
 label,
 input[type="button"],
 input[type="submit"],
@@ -265,10 +189,57 @@ button {
   cursor: pointer;
 }
 
+[aria-loading] {
+  cursor: progress;
+}
+
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
 button,
 input,
 select,
 textarea {
   margin: 0;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: var(--typography-spacing-vertical);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}
+
+h1 {
+  --text-color: var(--h1-color);
+}
+
+h2 {
+  --text-color: var(--h2-color);
+}
+
+h3 {
+  --text-color: var(--h3-color);
+}
+
+h4 {
+  --text-color: var(--h4-color);
+}
+
+h5 {
+  --text-color: var(--h5-color);
+}
+
+h6 {
+  --text-color: var(--h6-color);
+}
+
+// Paragraphs
+p {
+  margin-bottom: var(--typography-spacing-vertical);
 }
