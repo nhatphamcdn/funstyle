@@ -1,1 +1,43 @@
-/****************************   */
+%container-fluid {
+  --#{$prefix}gutter-x: #{$container-padding-x};
+  --#{$prefix}gutter-y: 0;
+
+  width: 100%;
+  padding-right: calc(var(--#{$prefix}gutter-x) * 0.5);
+  padding-left: calc(var(--#{$prefix}gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container,
+.container-fluid {
+  @extend %container-fluid;
+}
+
+@each $breakpoint, $container-max-width in $container-max-widths {
+  .container-#{$breakpoint} {
+    @extend %container-fluid;
+  }
+
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    %responsive-container-#{$breakpoint} {
+      max-width: $container-max-width;
+    }
+
+    // Extend each breakpoint which is smaller or equal to the current breakpoint
+    $extend-breakpoint: true;
+
+    @each $name, $width in $grid-breakpoints {
+      @if $extend-breakpoint {
+        .container#{breakpoint-infix($name, $grid-breakpoints)} {
+          @extend %responsive-container-#{$breakpoint};
+        }
+
+        // Once the current breakpoint is reached, stop extending
+        @if $breakpoint == $name {
+          $extend-breakpoint: false;
+        }
+      }
+    }
+  }
+}

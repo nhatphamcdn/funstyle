@@ -1,0 +1,56 @@
+.row {
+  --#{$prefix}gutter-x: #{$grid-gutter-width};
+  --#{$prefix}gutter-y: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--#{$prefix}gutter-y));
+  margin-right: calc(-0.5 * var(--#{$prefix}gutter-x));
+  margin-left: calc(-0.5 * var(--#{$prefix}gutter-x));
+
+  > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--#{$prefix}gutter-x) * 0.5);
+    padding-left: calc(var(--#{$prefix}gutter-x) * 0.5);
+    margin-top: var(--#{$prefix}gutter-y);
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+    .col#{$infix} {
+      flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+    }
+
+    .col#{$infix}-auto {
+      @include make-col($size: true, $auto-width: true);
+    }
+
+    @if $grid-columns > 0 {
+      @for $i from 1 through $grid-columns {
+        .col#{$infix}-#{$i} {
+          @include make-col($i, $grid-columns);
+        }
+      }
+    }
+
+    // Gutters
+    // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
+    @each $key, $value in $gutters {
+      .g#{$infix}-#{$key},
+      .gx#{$infix}-#{$key} {
+        --#{$prefix}gutter-x: #{$value};
+      }
+
+      .g#{$infix}-#{$key},
+      .gy#{$infix}-#{$key} {
+        --#{$prefix}gutter-y: #{$value};
+      }
+    }
+  }
+}

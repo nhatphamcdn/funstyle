@@ -1,0 +1,40 @@
+// COPY from CSS Bootstrap variables
+
+// Prefix for :root CSS variables
+$prefix: fs- !default;
+
+// grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+// container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+// Grid columns
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
+$spacer: 1rem !default;
+$gutters: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+// Container padding
+$container-padding-x: 1.5rem !default;
