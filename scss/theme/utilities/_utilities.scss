@@ -1,0 +1,270 @@
+@use "sass:map";
+/* stylelint-disable */
+$utilities: (
+  "overflow": (
+    values: auto hidden,
+  ),
+  "display": (
+    class: d,
+    responsive: true,
+    print: true,
+    values: none inline inline-block block table table-row table-cell flex inline-flex,
+  ),
+
+  // Sizing
+  "max-width": (
+    class: mw,
+    values: (100: 100%),
+  ),
+  "viewport-width": (
+    property: width,
+    class: vw,
+    values: (100: 100vw),
+  ),
+  "min-viewport-width": (
+    property: min-width,
+    class: min-vw,
+    values: (100: 100vw),
+  ),
+  "max-height": (
+    class: mh,
+    values: (100: 100%),
+  ),
+  "viewport-height": (
+    property: height,
+    class: vh,
+    values: (100: 100vh),
+  ),
+  "min-viewport-height": (
+    property: min-height,
+    class: min-vh,
+    values: (100: 100vh),
+  ),
+  
+  // Flex
+  "flex": (
+    responsive: true,
+    values: (fill: 1 1 auto),
+  ),
+  "flex-direction": (
+    class: flex,
+    responsive: true,
+    values: row column row-reverse column-reverse,
+  ),
+  "flex-grow": (
+    class: flex,
+    responsive: true,
+    values: (
+      grow-0: 0,
+      grow-1: 1,
+    ),
+  ),
+  "flex-shrink": (
+    class: flex,
+    responsive: true,
+    values: (
+      shrink-0: 0,
+      shrink-1: 1,
+    ),
+  ),
+  "flex-wrap": (
+    class: flex,
+    responsive: true,
+    values: wrap nowrap wrap-reverse,
+  ),
+  "justify-content": (
+    responsive: true,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around,
+    ),
+  ),
+  "align-items": (
+    responsive: true,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch,
+    ),
+  ),
+  "align-content": (
+    responsive: true,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around,
+      stretch: stretch,
+    ),
+  ),
+  "align-self": (
+    responsive: true,
+    values: (
+      auto: auto,
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch,
+    ),
+  ),
+  "order": (
+    responsive: true,
+    values: (
+      first: -1,
+      0: 0,
+      1: 1,
+      2: 2,
+      3: 3,
+      4: 4,
+      5: 5,
+      last: 6,
+    ),
+  ),
+  
+  // Margin
+  "margin": (
+    class: m,
+    responsive: true,
+    values: map.merge($spacers, (auto: auto)),
+  ),
+  "margin-x": (
+    class: mx,
+    property: margin-right margin-left,
+    responsive: true,
+    values: map.merge($spacers, (auto: auto)),
+  ),
+  "margin-y": (
+    class: my,
+    property: margin-top margin-bottom,
+    responsive: true,
+    values: map.merge($spacers, (auto: auto)),
+  ),
+  "margin-top": (
+    class: mt,
+    responsive: true,
+    values: map.merge($spacers, (auto: auto)),
+  ),
+  "margin-right": (
+    class: mr,
+    responsive: true,
+    values: map.merge($spacers, (auto: auto)),
+  ),
+  "margin-bottom": (
+    class: mb,
+    responsive: true,
+    values: map.merge($spacers, (auto: auto)),
+  ),
+  "margin-left": (
+    class: ml,
+    responsive: true,
+    values: map.merge($spacers, (auto: auto)),
+  ),
+  
+  // Negative margin
+  "negative-margin": (
+    class: m,
+    property: margin,
+    responsive: true,
+    values: $negative-spacers,
+  ),
+  "negative-margin-x": (
+    class: mx,
+    property: margin-right margin-left,
+    responsive: true,
+    values: $negative-spacers,
+  ),
+  "negative-margin-y": (
+    class: my,
+    property: margin-top margin-bottom,
+    responsive: true,
+    values: $negative-spacers,
+  ),
+  "negative-margin-top": (
+    class: mt,
+    property: margin-top,
+    responsive: true,
+    values: $negative-spacers,
+  ),
+  "negative-margin-right": (
+    class: mr,
+    property: margin-right,
+    responsive: true,
+    values: $negative-spacers,
+  ),
+  "negative-margin-bottom": (
+    class: mb,
+    property: margin-bottom,
+    responsive: true,
+    values: $negative-spacers,
+  ),
+  "negative-margin-left": (
+    class: ml,
+    property: margin-left,
+    responsive: true,
+    values: $negative-spacers,
+  ),
+  
+  // Padding
+  "padding": (
+    class: p,
+    responsive: true,
+    values: $spacers,
+  ),
+  "padding-x": (
+    class: px,
+    property: padding-right padding-left,
+    responsive: true,
+    values: $spacers,
+  ),
+  "padding-y": (
+    class: py,
+    property: padding-top padding-bottom,
+    responsive: true,
+    values: $spacers,
+  ),
+  "padding-top": (
+    class: pt,
+    responsive: true,
+    values: $spacers,
+  ),
+  "padding-right": (
+    class: pr,
+    responsive: true,
+    values: $spacers,
+  ),
+  "padding-bottom": (
+    class: pb,
+    responsive: true,
+    values: $spacers,
+  ),
+  "padding-left": (
+    class: pl,
+    responsive: true,
+    values: $spacers,
+  ),
+  "gap": (
+    responsive: true,
+    property: gap,
+    class: gap,
+    values: $spacers
+  ),
+  // text
+  "text-align": (
+    responsive: true,
+    property: text-align,
+    class: text,
+    values: (
+      start: left,
+      end: right,
+      center: center,
+    )
+  ),
+);
+/* stylelint-enable */

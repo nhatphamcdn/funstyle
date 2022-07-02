@@ -29,6 +29,12 @@ img,
 ins,
 kbd,
 q,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 samp,
 small,
 strong,
@@ -189,57 +195,10 @@ button {
   cursor: pointer;
 }
 
-[aria-loading] {
-  cursor: progress;
-}
-
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
 button,
 input,
 select,
 textarea {
   margin: 0;
-}
-
-// Headings
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: var(--typography-spacing-vertical);
-  color: var(--text-color);
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  font-family: var(--font-family);
-}
-
-h1 {
-  --text-color: var(--h1-color);
-}
-
-h2 {
-  --text-color: var(--h2-color);
-}
-
-h3 {
-  --text-color: var(--h3-color);
-}
-
-h4 {
-  --text-color: var(--h4-color);
-}
-
-h5 {
-  --text-color: var(--h5-color);
-}
-
-h6 {
-  --text-color: var(--h6-color);
-}
-
-// Paragraphs
-p {
-  margin-bottom: var(--typography-spacing-vertical);
 }

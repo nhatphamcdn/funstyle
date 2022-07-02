@@ -1,9 +1,12 @@
-@import "theme/global";
+/*!
+ * funstyle.css v1.0.0 (https://funstyle.nhatphamcdn.xyz)
+ * Copyright 2022 - Licensed under MIT (https://github.com/nhatphamcdn/funstyle/blob/feature/add-utilities/LICENSE.md)
+ */
+
 @import "theme/helpers/helpers";
+@import "theme/global";
 @import "theme/mixins/mixins";
 @import "base/base";
 @import "layout/layout";
 @import "module/module";
 @import "state/state";
-
-// @import "theme";

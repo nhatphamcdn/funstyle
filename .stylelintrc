@@ -3,7 +3,8 @@
     "stylelint-config-standard-scss"
   ],
   "rules": {
-    "indentation": 2
+    "indentation": 2,
+    "no-invalid-position-at-import-rule": null
   },
   "overrides": [
     {

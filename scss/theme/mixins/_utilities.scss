@@ -1,0 +1,81 @@
+@use "sass:map";
+@use "sass:list";
+@use "sass:string";
+
+@mixin generate-utility($utility, $infix, $important: true, $property: null) {
+  $values: map.get($utility, values);
+
+  @if type-of($values) == "string" or type-of(list.nth($values, 1)) != "list" {
+    $values: list.zip($values, $values);
+  }
+
+  @each $key, $value in $values {
+    $properties: if(map.has-key($utility, property), map.get($utility, property), $property);
+
+    @if type-of($properties) == "string" {
+      $properties: list.append((), $properties);
+    }
+
+    $property-class: if(map.has-key($utility, class), map.get($utility, class), list.nth($properties, 1));
+    $property-class: if($property-class == null, "", $property-class);
+    $state: if(map.has-key($utility, state), map.get($utility, state), ());
+    $infix: if($property-class == "" and string.slice($infix, 1, 1) == "-", string.slice($infix, 2), $infix);
+    $property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
+
+    @if $value {
+      .#{$property-class + $infix + $property-class-modifier} {
+        @each $property in $properties {
+          #{$property}: $value if($important, !important, null);
+        }
+      }
+
+      @each $pseudo in $state {
+        .#{$property-class + $infix + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+          @each $property in $properties {
+            #{$property}: $value if($important, !important, null);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin utility($utility, $breakpoints: $grid-breakpoints, $important: true) {
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+      @if type-of($utility) == "map" and (map.get($utility, responsive) or $infix == "") {
+        @include generate-utility($utility, $infix, $important);
+      }
+    }
+  }
+
+  @media print {
+    @if type-of($utility) == "map" and map.get($utility, print) == true {
+      @include generate-utility($utility, "-print", $important);
+    }
+  }
+}
+
+@mixin utilities($utilities, $breakpoints: $grid-breakpoints, $important: true) {
+  @each $breakpoint in map-keys($breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+      @each $key, $utility in $utilities {
+        @if type-of($utility) == "map" and (map.get($utility, responsive) or $infix == "") {
+          @include generate-utility($utility, $infix, $important, $key);
+        }
+      }
+    }
+  }
+
+  @media print {
+    @each $key, $utility in $utilities {
+      @if type-of($utility) == "map" and map.get($utility, print) == true {
+        @include generate-utility($utility, "-print", $important, $key);
+      }
+    }
+  }
+}
