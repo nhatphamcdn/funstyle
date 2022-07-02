@@ -249,5 +249,22 @@ $utilities: (
       responsive: true,
       values: $spacers,
   ),
+  "gap": (
+    responsive: true,
+    property: gap,
+    class: gap,
+    values: $spacers
+  ),
+  // text
+  "text-align": (
+    responsive: true,
+    property: text-align,
+    class: text,
+    values: (
+      start: left,
+      end: right,
+      center: center,
+    )
+  ),
 );
 /* stylelint-enable */

@@ -65,29 +65,44 @@ h4,
 h5,
 h6 {
   --font-weight: 700;
+
+  margin-bottom: var(--typography-spacing-vertical);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
 }
 
 h1 {
   --font-size: 2rem;
-  --typography-spacing-vertical: 3rem;
+  --text-color: var(--h1-color);
 }
 
 h2 {
   --font-size: 1.75rem;
-  --typography-spacing-vertical: 2.625rem;
+  --text-color: var(--h2-color);
 }
 
 h3 {
   --font-size: 1.5rem;
-  --typography-spacing-vertical: 2.25rem;
+  --text-color: var(--h3-color);
 }
 
 h4 {
   --font-size: 1.25rem;
-  --typography-spacing-vertical: 1.874rem;
+  --text-color: var(--h4-color);
 }
 
 h5 {
   --font-size: 1.125rem;
-  --typography-spacing-vertical: 1.6875rem;
+  --text-color: var(--h5-color);
+}
+
+h6 {
+  --text-color: var(--h6-color);
+}
+
+// Paragraphs
+p {
+  margin-bottom: var(--typography-spacing-vertical);
 }

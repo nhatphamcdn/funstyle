@@ -1,1 +1,5 @@
 @include utilities($utilities);
+
+.reset-typography-space {
+  --typography-spacing-vertical: 0;
+}
