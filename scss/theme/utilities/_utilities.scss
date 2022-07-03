@@ -40,7 +40,7 @@ $utilities: (
     class: min-vh,
     values: (100: 100vh),
   ),
-  
+
   // Flex
   "flex": (
     responsive: true,
@@ -127,7 +127,7 @@ $utilities: (
       last: 6,
     ),
   ),
-  
+
   // Margin
   "margin": (
     class: m,
@@ -166,7 +166,7 @@ $utilities: (
     responsive: true,
     values: map.merge($spacers, (auto: auto)),
   ),
-  
+
   // Negative margin
   "negative-margin": (
     class: m,
@@ -210,7 +210,7 @@ $utilities: (
     responsive: true,
     values: $negative-spacers,
   ),
-  
+
   // Padding
   "padding": (
     class: p,
@@ -267,4 +267,3 @@ $utilities: (
     )
   ),
 );
-/* stylelint-enable */
