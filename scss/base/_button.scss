@@ -1,0 +1,28 @@
+button,
+input[type="submit"],
+input[type="button"],
+[role="button"] {
+  --#{$prefix}btn-padding-x: 0.375rem;
+  --#{$prefix}btn-padding-y: 0.45rem;
+  --#{$prefix}btn-border-width: 1px;
+  --#{$prefix}btn-border-color: var(--primary);
+  --#{$prefix}background-color: var(--primary);
+  --#{$prefix}btn-border-radius: 4px;
+  --#{$prefix}btn-box-shadow: 1px 2px 3px  #{rgba($primary, 0.25)};
+  --#{$prefix}btn-disabled-opacity: 0.65;
+  --#{$prefix}btn-focus-box-shadow: 0 0 0 0.25rem rgb(var(--#{$prefix}btn-focus-shadow-rgb) 0.5);
+
+  display: inline-block;
+  padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
+  background-color: var(--#{$prefix}background-color);
+  color: var(--primary-color);
+  border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+  border-radius: var(--#{$prefix}btn-border-radius);
+  box-shadow: var(--#{$prefix}btn-box-shadow);
+
+  &:is([aria-current], :hover, :active, :focus) {
+    --#{$prefix}background-color: #{rgba($primary, 0.85)};
+    --#{$prefix}btn-border-color: #{rgba($primary, 0.85)};
+    --#{$prefix}btn-box-shadow: 1px 2px 3px  #{rgba($primary, 0.95)};
+  }
+}

@@ -202,3 +202,7 @@ select,
 textarea {
   margin: 0;
 }
+
+[aria-busy] {
+  cursor: progress;
+}
