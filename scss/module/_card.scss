@@ -1,1 +1,31 @@
 /****************************   */
+.card {
+  --card-background-color: #{$primary};
+  --card-box-shadow: 0 10px 30px -15px  #{rgba($primary, 0.75)};
+  --card-border-radius: 4px;
+  --card-padding-vertical: 1rem;
+  --card-padding-horizontal: 0.5rem;
+  --card-color: var(--primary-color);
+
+  padding: var(--card-padding-vertical) var(--card-padding-horizontal);
+  border-radius: var(--card-border-radius);
+  background-color: var(--card-background-color);
+  box-shadow: var(--card-box-shadow);
+  color: var(--card-color);
+
+  .card-title {
+    --card-title-color: var(--card-color);
+
+    color: var(--card-title-color);
+  }
+
+  .card-content {
+    --card-content-color: var(--card-color);
+
+    color: var(--card-content-color);
+  }
+
+  &:is([aria-current], :hover, :active, :focus) {
+    --card-box-shadow: 0 10px 30px -5px  #{rgba($primary, 0.85)};
+  }
+}
