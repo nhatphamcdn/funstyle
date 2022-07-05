@@ -1,0 +1,27 @@
+.btn {
+  &-outline {
+    --#{$prefix}background-color: transparent;
+    --#{$prefix}btn-color: #{$primary};
+
+    &:is([aria-current], :hover, :active, :focus) {
+      --#{$prefix}btn-color: var(--primary-color);
+    }
+  }
+
+  &-text {
+    --#{$prefix}background-color: transparent;
+    --#{$prefix}btn-border-width: 0;
+    --#{$prefix}btn-color: #{$primary};
+    --#{$prefix}btn-box-shadow: none;
+    --#{$prefix}btn-border-radius: 0;
+
+    border-bottom: 1px solid var(--#{$prefix}btn-border-color);
+
+    &:is([aria-current], :hover, :active, :focus) {
+      --#{$prefix}background-color: transparent;
+      --#{$prefix}btn-box-shadow: none;
+      --#{$prefix}btn-color: #{$primary-600};
+      --#{$prefix}btn-border-color: #{$primary-600};
+    }
+  }
+}
