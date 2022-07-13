@@ -4,7 +4,7 @@
     --#{$prefix}btn-color: #{$primary};
 
     &:is([aria-current], :hover, :active, :focus) {
-      --#{$prefix}btn-color: var(--primary-color);
+      --#{$prefix}btn-color: var(--#{$prefix}primary-color);
     }
   }
 

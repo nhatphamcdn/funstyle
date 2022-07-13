@@ -1,16 +1,16 @@
 a,
 [role="link"] {
   outline: none;
-  background-color: var(--background-color); // 1
-  color: var(--color);
-  text-decoration: var(--text-decoration);
+  background-color: var(--#{$prefix}background-color); // 1
+  color: var(--#{$prefix}color);
+  text-decoration: var(--#{$prefix}text-decoration);
 
   &:is([aria-current], :hover, :active, :focus) {
-    --color: var(--primary-hover);
+    --#{$prefix}color: var(--#{$prefix}primary-hover);
   }
 
   &:focus {
-    --background-color: var(--primary-focus);
+    --#{$prefix}background-color: var(--#{$prefix}primary-focus);
   }
 }
 
@@ -54,7 +54,7 @@ del {
 
 // Small
 small {
-  --font-size: 0.875em;
+  --#{$prefix}font-size: 0.875em;
 }
 
 // Headings
@@ -64,45 +64,45 @@ h3,
 h4,
 h5,
 h6 {
-  --font-weight: 700;
+  --#{$prefix}font-weight: 700;
 
-  margin-bottom: var(--typography-spacing-vertical);
-  color: var(--text-color);
-  font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  font-family: var(--font-family);
+  margin-bottom: var(--#{$prefix}typography-spacing-vertical);
+  color: var(--#{$prefix}text-color);
+  font-weight: var(--#{$prefix}font-weight);
+  font-size: var(--#{$prefix}font-size);
+  font-family: var(--#{$prefix}font-family);
 }
 
 h1 {
-  --font-size: 2rem;
-  --text-color: var(--h1-color);
+  --#{$prefix}font-size: 2rem;
+  --#{$prefix}text-color: var(--#{$prefix}-heading-color);
 }
 
 h2 {
-  --font-size: 1.75rem;
-  --text-color: var(--h2-color);
+  --#{$prefix}font-size: 1.75rem;
+  --#{$prefix}text-color: var(--#{$prefix}-heading-color);
 }
 
 h3 {
-  --font-size: 1.5rem;
-  --text-color: var(--h3-color);
+  --#{$prefix}font-size: 1.5rem;
+  --#{$prefix}text-color: var(--#{$prefix}-heading-color);
 }
 
 h4 {
-  --font-size: 1.25rem;
-  --text-color: var(--h4-color);
+  --#{$prefix}font-size: 1.25rem;
+  --#{$prefix}text-color: var(--#{$prefix}-heading-color);
 }
 
 h5 {
-  --font-size: 1.125rem;
-  --text-color: var(--h5-color);
+  --#{$prefix}font-size: 1.125rem;
+  --#{$prefix}text-color: var(--#{$prefix}-heading-color);
 }
 
 h6 {
-  --text-color: var(--h6-color);
+  --#{$prefix}text-color: var(--#{$prefix}-heading-color);
 }
 
 // Paragraphs
 p {
-  margin-bottom: var(--typography-spacing-vertical);
+  margin-bottom: var(--#{$prefix}typography-spacing-vertical);
 }
