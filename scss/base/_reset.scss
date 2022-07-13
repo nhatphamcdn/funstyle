@@ -78,10 +78,10 @@ summary {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font-weight: normal;
-  vertical-align: baseline;
   background: transparent;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 /* Handle box-sizing while better addressing child elements:
@@ -122,9 +122,9 @@ dfn[title] {
 
 /* tables still need cellspacing="0" in the markup */
 table {
-  font-size: inherit;
   border-collapse: separate;
   border-spacing: 0;
+  font-size: inherit;
 }
 
 th {
@@ -140,10 +140,10 @@ td {
 hr {
   display: block;
   height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
+  border: 0;
+  border-top: 1px solid #ccc;
 }
 
 input,
@@ -152,6 +152,8 @@ select {
 }
 
 pre {
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
   white-space: pre;
 
   /* CSS2 */
@@ -159,9 +161,6 @@ pre {
 
   /* CSS 2.1 */
   white-space: pre-line;
-
-  /* CSS 3 (and 2.1 as well, actually) */
-  word-wrap: break-word;
 
   /* IE */
 }

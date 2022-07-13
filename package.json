@@ -4,13 +4,14 @@
   "description": "FuncStyle is project make a myself UI. The main purpose of this project is for learning, and for personal use. It will contain ideas from many different frameworks, I will try to address those ideas in my comments.",
   "main": "css/funstyle.min.css",
   "scripts": {
-    "build": "npm run lint:scss && npm run css:compile && npm run css:prefix && npm run css:minify --silent",
+    "build": "npm run lint:scss && npm run css:compile && npm run css:prefix && npm run scss:sorter && npm run css:minify --silent",
     "css:compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:css/",
     "css:minify": "cleancss -O1 --with-rebase --source-map --source-map-inline-sources --batch --batch-suffix .min css/*.css !css/*.min.css",
     "css:prefix": "postcss --use autoprefixer --config css --replace css/*.css !css/*.min.css",
     "watch": "nodemon --watch scss/ --ext scss --exec 'npm run build'",
     "lint:scss": "stylelint '**/*.scss' -f verbose --color",
-    "lint:scss:fix": "stylelint '**/*.scss' --fix -f verbose —color"
+    "lint:scss:fix": "stylelint '**/*.scss' --fix -f verbose —color",
+    "scss:sorter": "postcss --config scss ./scss/**/*.scss --replace"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "clean-css-cli": "^5.6.0",
+    "css-declaration-sorter": "^6.3.0",
     "nodemon": "^2.0.18",
     "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
