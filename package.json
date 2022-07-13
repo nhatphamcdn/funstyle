@@ -1,6 +1,6 @@
 {
   "name": "@nhatphamcdn/funstyle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "FuncStyle is project make a myself UI. The main purpose of this project is for learning, and for personal use. It will contain ideas from many different frameworks, I will try to address those ideas in my comments.",
   "main": "css/funstyle.min.css",
   "scripts": {
