@@ -6,4 +6,30 @@ It only builds components that are usable and remove the choices. This is a CSS 
 
 
 ## Table of contents
-Coming soon...
+- [Usage](#usage)
+- Update in progress...
+
+
+## Usage
+
+**Install manually**
+
+[Download funstyle](https://github.com/nhatphamcdn/funstyle/archive/refs/tags/1.0.0.zip) and link `/css/funstyle.min.css` in the `<head>` of your website.
+
+```html
+<link rel="stylesheet" href="css/funstyle.min.css">
+```
+
+**Install from CDN**
+
+Alternatively, you can use [unpkg CDN](https://unpkg.com/@nhatphamfks-org/funstyle@1.0.0/css/funstyle.min.css) to link funstyle.
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@nhatphamfks-org/funstyle@1.0.0/css/funstyle.min.css">
+```
+
+**Install with NPM**
+
+```shell
+npm i @nhatphamfks-org/funstyle
+```
