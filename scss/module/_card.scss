@@ -1,31 +1,31 @@
 /****************************   */
 .card {
-  --card-background-color: #{$primary};
-  --card-box-shadow: 0 10px 30px -15px  #{rgba($primary, 0.75)};
-  --card-border-radius: 4px;
-  --card-padding-vertical: 1rem;
-  --card-padding-horizontal: 0.5rem;
-  --card-color: var(--primary-color);
+  --#{$prefix}card-background-color: #{$primary};
+  --#{$prefix}card-box-shadow: 0 10px 30px -15px  #{rgba($primary, 0.75)};
+  --#{$prefix}card-border-radius: 4px;
+  --#{$prefix}card-padding-vertical: 1rem;
+  --#{$prefix}card-padding-horizontal: 0.5rem;
+  --#{$prefix}card-color: var(--#{$prefix}primary-color);
 
-  padding: var(--card-padding-vertical) var(--card-padding-horizontal);
-  border-radius: var(--card-border-radius);
-  background-color: var(--card-background-color);
-  box-shadow: var(--card-box-shadow);
-  color: var(--card-color);
+  padding: var(--#{$prefix}card-padding-vertical) var(--#{$prefix}card-padding-horizontal);
+  border-radius: var(--#{$prefix}card-border-radius);
+  background-color: var(--#{$prefix}card-background-color);
+  box-shadow: var(--#{$prefix}card-box-shadow);
+  color: var(--#{$prefix}card-color);
 
   .card-title {
-    --card-title-color: var(--card-color);
+    --#{$prefix}card-title-color: var(--#{$prefix}card-color);
 
-    color: var(--card-title-color);
+    color: var(--#{$prefix}card-title-color);
   }
 
   .card-content {
-    --card-content-color: var(--card-color);
+    --#{$prefix}card-content-color: var(--#{$prefix}card-color);
 
-    color: var(--card-content-color);
+    color: var(--#{$prefix}card-content-color);
   }
 
   &:is([aria-current], :hover, :active, :focus) {
-    --card-box-shadow: 0 10px 30px -5px  #{rgba($primary, 0.85)};
+    --#{$prefix}card-box-shadow: 0 10px 30px -5px  #{rgba($primary, 0.85)};
   }
 }

@@ -7,7 +7,7 @@ input[type="button"],
   --#{$prefix}btn-border-width: 1px;
   --#{$prefix}btn-border-color: #{$primary};
   --#{$prefix}background-color: #{$primary};
-  --#{$prefix}btn-color: var(--primary-color);
+  --#{$prefix}btn-color: var(--#{$prefix}primary-color);
   --#{$prefix}btn-border-radius: 4px;
   --#{$prefix}btn-box-shadow: 1px 2px 3px  #{rgba($primary, 0.25)};
   --#{$prefix}btn-disabled-opacity: 0.65;

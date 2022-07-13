@@ -47,17 +47,17 @@ $container-padding-x: 1.5rem !default;
 
 :root {
   // Spacings for typography elements
-  --typography-spacing-vertical: 1.5rem;
+  --#{$prefix}typography-spacing-vertical: 1.5rem;
 
   // Primary colors
-  --primary: #{$primary-600};
-  --primary-hover: #{$primary-700};
-  --primary-focus: #{tint-color($primary-600, 0.125)};
-  --primary-inverse: #{$white};
+  --#{$prefix}primary: #{$primary-600};
+  --#{$prefix}primary-hover: #{$primary-700};
+  --#{$prefix}primary-focus: #{tint-color($primary-600, 0.125)};
+  --#{$prefix}primary-inverse: #{$white};
 
   // Texts colors
-  --primary-color: #{$white};
-  --text-color: #{$gray-700};
+  --#{$prefix}primary-color: #{$white};
+  --#{$prefix}text-color: #{$gray-700};
 }
 
 @import "utilities/utilities";
