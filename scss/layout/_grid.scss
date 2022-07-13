@@ -12,9 +12,9 @@
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
+    margin-top: var(--#{$prefix}gutter-y);
     padding-right: calc(var(--#{$prefix}gutter-x) * 0.5);
     padding-left: calc(var(--#{$prefix}gutter-x) * 0.5);
-    margin-top: var(--#{$prefix}gutter-y);
   }
 }
 
