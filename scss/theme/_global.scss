@@ -58,14 +58,13 @@ $container-padding-x: 1.5rem !default;
   --#{$prefix}typography-spacing-vertical: 1.5rem;
 
   // Primary colors
-  --#{$prefix}primary: #{$primary-600};
-  --#{$prefix}primary-hover: #{$primary-700};
+  --#{$prefix}primary: #{$primary};
+  --#{$prefix}primary-hover: #{tint-color($primary-600, 0.5)};
   --#{$prefix}primary-focus: #{tint-color($primary-600, 0.125)};
   --#{$prefix}primary-inverse: #{$white};
 
   // Texts colors
-  --#{$prefix}primary-color: #{$white};
-  --#{$prefix}text-color: #{$gray-700};
+  --#{$prefix}text-color: #{$white};
 }
 
 @import "utilities/utilities";

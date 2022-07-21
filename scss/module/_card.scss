@@ -5,7 +5,7 @@
   --#{$prefix}card-border-radius: 4px;
   --#{$prefix}card-padding-vertical: 1rem;
   --#{$prefix}card-padding-horizontal: 0.5rem;
-  --#{$prefix}card-color: var(--#{$prefix}primary-color);
+  --#{$prefix}card-color: var(--#{$prefix}text-color);
 
   padding: var(--#{$prefix}card-padding-vertical) var(--#{$prefix}card-padding-horizontal);
   border-radius: var(--#{$prefix}card-border-radius);
