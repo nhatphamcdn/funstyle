@@ -14,16 +14,15 @@
 a,
 [role="link"] {
   outline: none;
-  background-color: var(--#{$prefix}background-color); // 1
-  color: var(--#{$prefix}color);
+  color: var(--#{$prefix}primary);
   text-decoration: var(--#{$prefix}text-decoration);
 
   &:is([aria-current], :hover, :active, :focus) {
-    --#{$prefix}color: var(--#{$prefix}primary-hover);
+    --#{$prefix}primary: var(--#{$prefix}primary-hover);
   }
 
   &:focus {
-    --#{$prefix}background-color: var(--#{$prefix}primary-focus);
+    --#{$prefix}primary: var(--#{$prefix}primary-focus);
   }
 }
 
